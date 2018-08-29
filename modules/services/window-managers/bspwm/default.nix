@@ -50,7 +50,7 @@ let
 in
 
 {
-  options = import .options.nix {};
+  options = import .options.nix { inherit pkgs; };
 
 	config = mkIf cfg.enable (mkMerge [
 		{
